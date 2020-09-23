@@ -5,23 +5,23 @@ const App = () => {
 
     const purple = "#8e44ad"
     const [bg, setBg] = useState(purple);
-    const [name, setName] = useState("Click Me");
+    const [name, setName] = useState("Mouse Out");
 
     const bgChange = () => {
         let newBg = "#34495e"
         setBg(newBg);
-        setName("Ooch!! ");
+        setName("Mouse In");
     };
 
     const bgBack = () => {
         setBg(purple);
-        setName("Ayyo!!"); 
+        setName("Mouse Out"); 
     };
 
 return(
     <>
         <div style = {{ backgroundColor: bg }}>
-            <button onClick = {bgChange}  onDoubleClick = {bgBack} > {name} </button>
+            <button onMouseEnter = {bgChange}  onMouseLeave = {bgBack} > {name} </button>
         </div>
     </>
 );
